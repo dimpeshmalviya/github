@@ -1,0 +1,51 @@
+Click SOURCE CODE from the Project Home menu.
+Browse and open the Git repository in the code browser.
+Select Settings > Policies.
+Select Pull request for Repository Category.
+The Protected Branches and Review Rules fields show up. For more information about Repository Category, Protected Branches and Review Rules, see Review code.
+
+
+
+
+Select one of the review rules from the drop-down list.	
+
+Click Save.
+Create a pull request
+
+When you are ready to merge the change, or at least to start getting feedback, you should create a pull request. You can do this easily from the Branches tab by clicking on the Create button for your feature branch.
+
+Go to the Branches tab on a Git repository page.
+Click Create.
+Select the source branch which is wanted to be merged.
+Select the target branch to which you want the changes to be merged.
+Give an appropriate subject line and description that will be used as a commit message for a merged pull request.
+Optionally you can provide a summary of the pull request. This supports markdown formatting.
+
+The Commits tab at the bottom of the page displays the list of commits made in the selected source branch. The Files tab shows the difference between the source and target branch.
+
+Click Create Pull Request.
+As a reviewer, click the pull request that you want to review from the list of open pull requests on the Reviews tab.
+
+Review a pull request
+
+In addition to the requested reviewers, anyone with access to the repository and who wishes to comment on the pull request can review and post their comments on the pull request details page.
+
+On the pull request details page, you can switch between three views: Messages, Commits and Files. Click the Commits tab to view the list of commits. Click the Files tab to review the code changes made in each file. You have the option to view the difference between the source and target branches.
+Cherry Pick: Apply the changes introduced by existing commits: You can also cherry pick and apply changes introduced by existing commits to another branch. For example, you can now use this Cherry Pick function in TeamForge's native code browser to apply a commit in master to a release branch.
+
+Once you have reviewed the changes, on the Messages tab, enter your comments and give an appropriate voting as well.
+Note: The message section supports markdown formatting with a preview option.
+Merge (close) a pull request
+
+Once the pull request is reviewed, it is ready to be merged, that is the Merge button on the pull request details page is enabled only if the pull request satisfies all the repository specific qualification criteria. For example, it is possible to merge pull requests even without any voting if “no voting” has been defined as gating criteria. Also, it might require both voting AND acceptance by Continuous Integration; basically it totally depends on the gating criteria of the repository in question.
+Note: These criteria are set by the repository owner in Settings > Policies tab for the Pull Request Repository Category.
+Click the Merge button to merge the source branch into the target branch.
+If the source branch is not updated with the latest changes, a merge conflict is detected prompting you to rebase your request.
+Click the Rebase button. Once rebased, the pull request has to be revalidated after which you can merge the pull request into the target branch.
+The newly-merged pull request is added to the list of merged pull requests.
+Note: Once merged, on the Graph view, you can see that the merged branch has been added to the graph. A link to the pull request is also provided.
+View pull requests
+
+Click the Reviews tab on a GIT repository page. The pull request details page displays the list of Open, Merged and Abandoned pull requests under appropriate tabs.
+For each pull request, the author, title, number of thumbs up/down, and the time elapsed since the pull request was created, are shown.
+On the Abandoned pull request details page, you have the option to restore an abandoned pull request.
